@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: doug-demo
+  cloud:
+    config:
+      enabled: false
+      username: user
+
+info:
+  build:
+    version: release/@project.version@
+
+server:
+  contextPath: /demo
+  port: 8888
+
+endpoints:
+  shutdown:
+    enabled: true
+
+health:
+  config:
+    enabled: false
+
+appsecurity:
+  admin:
+    username: admin
+    password: password
+  user:
+    username: user
+    password: password
+
+defaultCorrelationId: "[unspecified]"
+
+keepalive:
+  location: /opt/app/doug/demo/live/service/healthcheck/keepalive
+
+graphite:
+  host: graphite
+  port: 2003
+
+logging:
+  path: ./logs
