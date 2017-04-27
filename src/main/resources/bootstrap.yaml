@@ -14,21 +14,19 @@ server:
   contextPath: /demo
   port: 8888
 
+security:
+  basic:
+    enabled: false
+
 endpoints:
+  health:
+    sensitive: false
   shutdown:
     enabled: true
 
 health:
   config:
     enabled: false
-
-appsecurity:
-  admin:
-    username: admin
-    password: password
-  user:
-    username: user
-    password: password
 
 defaultCorrelationId: "[unspecified]"
 
